@@ -42,6 +42,7 @@
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/css/ionic.app.css \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/bg-gif.gif \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/bg-img.jpg \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/conference.png \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/feeds \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/ionic.png \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/img/logo.png \
@@ -1588,8 +1589,8 @@
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/meetings \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/meetingsmap.html \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/side-menu.html \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/speaker.html \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/speakers.html \
-/Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/tmp.html \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/welcome.html \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/meetings/eastern-meetings.html \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/assets/www/views/app/meetings/eastern.html \

@@ -58,7 +58,33 @@ angular.module('na_ireland.controllers', [])
 
 // Cleantime calculator view controller
 .controller('CleantimeCtrl', function($scope, $stateParams) {
+	function humanise(total_days)
+	{
+	    var date_current = new Date();
+	    var utime_target = date_current.getTime() + total_days*86400*1000;
+	    var date_target = new Date(utime_target);
 
+	    var diff_year  = parseInt(date_target.getUTCFullYear() - date_current.getUTCFullYear());
+	    var diff_month = parseInt(date_target.getUTCMonth() - date_current.getUTCMonth());
+	    var diff_day   = parseInt(date_target.getUTCDate() - date_current.getUTCDate());
+
+	    var days_in_month = [31, (date_target.getUTCFullYear()%4?29:28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	    var date_string = "";
+	    while(true)
+	    {
+	        date_string = "That's ";
+	        date_string += (diff_year>0?diff_year + " years ":"");
+
+	        if(diff_month<0){diff_year -= 1; diff_month += 12; continue;}
+	        date_string += (diff_month>0?diff_month + " months ":"");
+
+	        if(diff_day<0){diff_month -= 1; diff_day += days_in_month[((11+date_target.getUTCMonth())%12)]; continue;}
+	        date_string += (diff_day>0?diff_day + " days ":"");
+	        break;
+	    }
+	    console.log(date_string);
+	    return date_string;
+	}
 
 	var _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
@@ -83,8 +109,8 @@ angular.module('na_ireland.controllers', [])
 			var d = new Date(); // today's date
 			$scope.datepickerObject.inputDate = val;
 			var result = dateDiffInDays(val, d);
-
-			$scope.results = "<h4> You are " + result + " days clean!";
+			var dateString = humanise(result);
+			$scope.results = "<h4> You are " + result + " days clean!<br><p>" + dateString + "</p>";
 	  }
 	};
 
@@ -168,16 +194,27 @@ angular.module('na_ireland.controllers', [])
 })
 
 // Audio controller
-.controller('AudioController', function($scope, $cordovaMedia, $ionicLoading, $http) {
+.controller('AudioController', function($scope, $ionicLoading, $http) {
+	$ionicLoading.show({template: 'Loading...'});
+	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
+		$scope.conventionList = [];
+		angular.forEach(response.data.Conventions, function(value, key) {
+			$scope.conventionList.push(value);
+		});
+		$ionicLoading.hide();
+	});
+})
+
+.controller('SpeakerController', function($scope, $ionicLoading, $cordovaMedia, $stateParams) {
 
 	$scope.play = function(src) {
-			var media = $cordovaMedia.newMedia(src, null, null, mediaStatusCallback);
+			var media = new cordovaMedia(src, null, null, mediaStatusCallback);
 			$cordovaMedia.play(media);
 	};
 
-	$scope.clearSearch = function() {
-    $scope.search = '';
-  };
+	$scope.stop = function() {
+			$cordovaMedia.stop();
+	};
 
 	var mediaStatusCallback = function(status) {
 			if(status == 1) {
@@ -187,17 +224,9 @@ angular.module('na_ireland.controllers', [])
 			}
 	};
 
-	$ionicLoading.show({template: 'Loading...'});
-	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
-
-		$scope.conventionList = [];
-
-		angular.forEach(response.data.Conventions, function(value, key) {
-			$scope.conventionList.push(value);
-		});
-		$ionicLoading.hide();
-	});
+	$scope.conventionName = $stateParams.conventionName;
+	$scope.speakerName    = $stateParams.speakerName;
+	$scope.fileName       = $stateParams.fileName;
 
 })
-
 ;

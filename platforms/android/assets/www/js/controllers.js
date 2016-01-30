@@ -194,16 +194,27 @@ angular.module('na_ireland.controllers', [])
 })
 
 // Audio controller
-.controller('AudioController', function($scope, $cordovaMedia, $ionicLoading, $http) {
+.controller('AudioController', function($scope, $ionicLoading, $http) {
+	$ionicLoading.show({template: 'Loading...'});
+	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
+		$scope.conventionList = [];
+		angular.forEach(response.data.Conventions, function(value, key) {
+			$scope.conventionList.push(value);
+		});
+		$ionicLoading.hide();
+	});
+})
+
+.controller('SpeakerController', function($scope, $ionicLoading, $cordovaMedia, $stateParams) {
 
 	$scope.play = function(src) {
-			var media = $cordovaMedia.newMedia(src, null, null, mediaStatusCallback);
+			var media = new cordovaMedia(src, null, null, mediaStatusCallback);
 			$cordovaMedia.play(media);
 	};
 
-	$scope.clearSearch = function() {
-    $scope.search = '';
-  };
+	$scope.stop = function() {
+			$cordovaMedia.stop();
+	};
 
 	var mediaStatusCallback = function(status) {
 			if(status == 1) {
@@ -213,17 +224,9 @@ angular.module('na_ireland.controllers', [])
 			}
 	};
 
-	$ionicLoading.show({template: 'Loading...'});
-	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
-
-		$scope.conventionList = [];
-
-		angular.forEach(response.data.Conventions, function(value, key) {
-			$scope.conventionList.push(value);
-		});
-		$ionicLoading.hide();
-	});
+	$scope.conventionName = $stateParams.conventionName;
+	$scope.speakerName    = $stateParams.speakerName;
+	$scope.fileName       = $stateParams.fileName;
 
 })
-
 ;

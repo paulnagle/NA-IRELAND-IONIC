@@ -1,4 +1,11 @@
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes.dex : \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/BuildConfig.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/CordovaApp.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/R$attr.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/R$drawable.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/R$string.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/R$xml.class \
+/Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/ie/nasouth/android/naireland/R.class \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/org/apache/cordova/file/ContentFilesystem.class \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/org/apache/cordova/file/DirectoryManager.class \
 /Users/paulnagle/ionicNa-Ireland-2/platforms/android/ant-build/classes/org/apache/cordova/file/EncodingException.class \
