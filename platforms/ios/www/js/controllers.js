@@ -205,15 +205,17 @@ angular.module('na_ireland.controllers', [])
 	});
 })
 
-.controller('SpeakerController', function($scope, $ionicLoading, $cordovaMedia, $stateParams) {
+.controller('SpeakerController', function($scope, $ionicLoading, $stateParams) {
+
+	var media = new Media($stateParams.fileName, null, null, mediaStatusCallback);
 
 	$scope.play = function(src) {
-			var media = new cordovaMedia(src, null, null, mediaStatusCallback);
-			$cordovaMedia.play(media);
+			media.play();
 	};
 
 	$scope.stop = function() {
-			$cordovaMedia.stop();
+			console.log("stopping media");
+			media.stop();
 	};
 
 	var mediaStatusCallback = function(status) {
@@ -227,6 +229,15 @@ angular.module('na_ireland.controllers', [])
 	$scope.conventionName = $stateParams.conventionName;
 	$scope.speakerName    = $stateParams.speakerName;
 	$scope.fileName       = $stateParams.fileName;
+
+	var stateChangeListener = $scope.$on('$stateChangeSuccess', function(data){
+		if(data.url !== currentUrl){
+			console.log('leaving view');
+			media.stop();
+			stateChangeListener();
+		}
+	});
+
 
 })
 ;

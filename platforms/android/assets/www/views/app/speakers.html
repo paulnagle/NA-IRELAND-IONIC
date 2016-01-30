@@ -1,5 +1,10 @@
 <ion-view>
   <ion-view hide-back-button="true">
+  <ion-nav-buttons side="left">
+     <button class="button button-assertive" menu-toggle="left">
+          <i class="menu-icon icon ion-navicon"></i>
+     </button>
+  </ion-nav-buttons>
   <ion-nav-title>
     <span>NA Speakers</span>
   </ion-nav-title>
@@ -11,6 +16,7 @@
         <img src="img/conference.png">
         <ion-list>
         <h1>{{convention.convention_name}}</h1>
+        <br>
       </div>
       <div>
         <ion-item ng-repeat="speaker in convention.speakers">
