@@ -239,6 +239,5 @@ angular.module('na_ireland.controllers', [])
 		}
 	});
 
-
 })
 ;

@@ -205,7 +205,7 @@ angular.module('na_ireland.controllers', [])
 	});
 })
 
-.controller('SpeakerController', function($scope, $ionicLoading, $stateParams) {
+.controller('SpeakerController', function($scope, $ionicLoading, $stateParams, $state) {
 
 	var media = new Media($stateParams.fileName, null, null, mediaStatusCallback);
 
@@ -230,14 +230,20 @@ angular.module('na_ireland.controllers', [])
 	$scope.speakerName    = $stateParams.speakerName;
 	$scope.fileName       = $stateParams.fileName;
 
-	var stateChangeListener = $scope.$on('$stateChangeSuccess', function(data){
-		if(data.url !== currentUrl){
+	var stateChangeListener = $scope.$on('$stateChangeStart', function(data){
+		console.log("stateChangeStart triggered!!!");
+		if(data.url !== $state.current.url ){
 			console.log('leaving view');
 			media.stop();
 			stateChangeListener();
 		}
 	});
 
+	var pauseListener = $scope.$on('$pause', function(data){
+		console.log("pause triggered!!!");
+		media.stop();
+		pauseListener();
+	});
 
 })
 ;
