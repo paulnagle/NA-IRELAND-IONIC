@@ -207,31 +207,34 @@ angular.module('na_ireland.controllers', [])
 
 .controller('SpeakerController', function($scope, $ionicLoading, $cordovaMedia, $stateParams) {
 
-	var mediaStatusCallback = function(status) {
-			if(status == 1) {
-					$ionicLoading.show({template: 'Loading...'});
-			} else {
-					$ionicLoading.hide();
-			}
+	$scope.playTrack = function(track, key) {
+	  // Preload an audio track before we play it
+	  window.plugins.NativeAudio.preloadComplex(key, track, 1, 1, 0, function(msg) {
+	    // If this is not a first playback stop and unload previous audio track
+	    if ($scope.player.key.length > 0) {
+	      window.plugins.NativeAudio.stop($scope.player.key); // Stop audio track
+	      window.plugins.NativeAudio.unload($scope.player.key); // Unload audio track
+	    }
+
+	    window.plugins.NativeAudio.play(key); // Play audio track
+	    $scope.player.key = key; // Set a current audio track so we can close it if needed
+	  }, function(msg) {
+	    console.log('error: ' + msg); // Loading error
+	  });
 	};
 
-	$scope.play = function(src) {
-			var media = $cordovaMedia.newMedia(src, null, null, mediaStatusCallback);
-			$cordovaMedia.play(media);
+	$scope.stopTrack = function() {
+	    // If this is not a first playback stop and unload previous audio track
+	    if ($scope.player.key.length > 0) {
+	      window.plugins.NativeAudio.stop($scope.player.key); // Stop audio track
+	      window.plugins.NativeAudio.unload($scope.player.key); // Unload audio track
+	      $scope.player.key = ''; // Remove a current track on unload, it will break an app if we try to unload it again in playTrack function
+	    }
 	};
 
-	$scope.clearSearch = function() {
-		$scope.search = '';
-	};
-
-$scope.track = [
-			{
-					url: $stateParams.fileName,
-					artist: $stateParams.conventionName,
-					title: $stateParams.speakerName,
-					art: 'https://ionic-audio.s3.amazonaws.com/The_Police_Greatest_Hits.jpg'
-			}
-		];
+	$scope.conventionName = $stateParams.conventionName;
+	$scope.speakerName    = $stateParams.speakerName;
+	$scope.fileName       = $stateParams.fileName;
 
 })
 ;

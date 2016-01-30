@@ -7,24 +7,25 @@
   </ion-nav-buttons>
 
   <ion-nav-title>
-    <span>{{heading}}</span>
+    <span>{{conventionName}}</span>
   </ion-nav-title>
 
   <ion-content>
-    <ion-audio-track track="track">
-      <div class="list card">
-        <div class="item item-thumbnail-left">
-          <h2>{{track.artist}}</h2>
-          <p>{{track.title}}</p>
-          <ion-audio-controls>
-            <a class="button button-icon icon" ion-audio-play></a>
-            <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
-          </ion-audio-controls>
-        </div>
-        <div class="item item-divider">
-          <ion-audio-progress-bar display-time></ion-audio-progress-bar>
-        </div>
-      </div>
-    </ion-audio-track>
+    <div class="list card">
+      <h2>{{conventionName}}</h2>
+      <h3>{{speakerName}}</h3>
+
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <a class="tab-item" href="#" ng-click="playTrack('{{fileName}}', 1)">
+        <i class="icon ion-ios-play"></i>
+        Play
+      </a>
+      <a class="tab-item" href="#" ng-click="stopTrack(1)">
+        <i class="icon ion-android-checkbox-blank"></i>
+        Stop
+      </a>
+    </div>
+
+</div>
   </ion-content>
 </ion-view>

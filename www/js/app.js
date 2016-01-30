@@ -21,7 +21,6 @@ angular.module('na_ireland', [
   'ngResource',
   'ngCordova',
   'slugifier',
-  'ionic-audio',
   'ionic-datepicker'
 ])
 
@@ -133,7 +132,7 @@ $ionicPlatform.registerBackButtonAction(function (event) {
   })
 
   .state('app.speaker', {
-    url: "/speakers/:conventionName",
+    url: "/speaker/:conventionName/:speakerName/:fileName",
     views: {
       'menuContent': {
         templateUrl: "views/app/speaker.html",
