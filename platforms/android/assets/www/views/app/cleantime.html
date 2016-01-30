@@ -1,0 +1,13 @@
+<ion-view class="calc-view">
+  <ion-nav-title>
+    <span>Cleantime Calculator</span>
+  </ion-nav-title>
+  <ion-content padding="5">
+    <h1>Cleantime calculator</h1>
+
+    <ionic-datepicker input-obj="datepickerObject">
+      <button class="button button-block button-positive"> {{datepickerObject.inputDate | date:datepickerObject.dateFormat}}</button>
+    </ionic-datepicker>
+        <div ng-bind-html="results"></div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view class="post-view">
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">{{post.title}}</h1>
+
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+      <p class="post-text" dynamic-anchor-fix ng-bind-html="post.content | rawHtml"></p>
+    </div>
+
+  </ion-content>
+
+</ion-view>

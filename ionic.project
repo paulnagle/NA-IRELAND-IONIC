@@ -1,0 +1,14 @@
+{
+  "name": "na_ireland",
+  "app_id": "f15e6cc5",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

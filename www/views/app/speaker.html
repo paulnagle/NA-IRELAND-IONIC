@@ -1,0 +1,30 @@
+<ion-view view-title="{{conventionName}}">
+  <ion-view hide-back-button="true">
+  <ion-nav-buttons side="left">
+     <button class="button button-assertive" ui-sref="app.speakers">
+          <i class="menu-icon icon ion-ios-arrow-left"></i>
+     </button>
+  </ion-nav-buttons>
+
+  <ion-nav-title>
+    <span>{{heading}}</span>
+  </ion-nav-title>
+
+  <ion-content>
+    <ion-audio-track track="track">
+      <div class="list card">
+        <div class="item item-thumbnail-left">
+          <h2>{{track.artist}}</h2>
+          <p>{{track.title}}</p>
+          <ion-audio-controls>
+            <a class="button button-icon icon" ion-audio-play></a>
+            <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
+          </ion-audio-controls>
+        </div>
+        <div class="item item-divider">
+          <ion-audio-progress-bar display-time></ion-audio-progress-bar>
+        </div>
+      </div>
+    </ion-audio-track>
+  </ion-content>
+</ion-view>

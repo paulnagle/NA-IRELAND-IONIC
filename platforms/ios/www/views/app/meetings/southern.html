@@ -1,0 +1,48 @@
+<ion-view view-title="Southern Area">
+<ion-view hide-back-button="true">
+  <ion-nav-buttons side="left">
+     <button class="button button-assertive" ui-sref="app.meetinglist">
+          <i class="menu-icon icon ion-ios-arrow-left"></i>
+     </button>
+  </ion-nav-buttons>
+
+  <ion-nav-title>
+    <span>Southern Area</span>
+  </ion-nav-title>
+
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Cork'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Cork</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Kerry'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Kerry</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Limerick'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Limerick</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Clare'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Clare</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Waterford'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Waterford</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.southern-meetings({countyName: 'Tipperary'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Tipperary</h2>
+      </ion-item>
+
+  </ion-content>
+</ion-view>

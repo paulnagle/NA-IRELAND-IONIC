@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content class="post-size-14px">
+    <ion-nav-bar class="bar app-top-bar">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
+    <ion-content>
+      <ion-list>
+        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.welcome">
+          <div class="user-image-container">
+            <pre-img ratio="_1_1" helper-class="rounded-image">
+              <img class="user-image" ng-src="img/web_hi_res_512.png" spinner-on-load>
+          	</pre-img>
+          </div>
+          <h2 class="greeting">NA Ireland</h2>
+          <p class="message">Welcome!</p>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.meetinglist">
+          <i class="icon ion-calendar"></i>
+          <h2 class="menu-text">Meetings List</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.maps">
+          <i class="icon ion-map"></i>
+          <h2 class="menu-text">Meetings Map</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.jft">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">Just For Today</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.events">
+          <i class="icon ion-android-star-outline"></i>
+          <h2 class="menu-text">Events and Conventions</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.speakers">
+          <i class="icon ion-ios-mic-outline"></i>
+          <h2 class="menu-text">NA Speakers</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.clean-calc">
+          <i class="icon ion-ios-calculator"></i>
+          <h2 class="menu-text">Cleantime Calc</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.contact">
+          <i class="icon ion-social-whatsapp-outline"></i>
+          <h2 class="menu-text">Contact Us</h2>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

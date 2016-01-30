@@ -1,0 +1,707 @@
+{"Conventions":
+	[
+		{
+		"convention_name": "IRCNA - 20",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/01-HelenG.mp3",
+				"Title": "Helen G - Opening Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/02-TonyP.mp3",
+				"Title": "Tony P - Opening Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/03-MiriamK.mp3",
+				"Title": "Miriam K - Because I'm worth it",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/04-John.mp3",
+				"Title": "John - Because I'm worth it",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/05-JamesM.mp3",
+				"Title": "James M - 12+12+1",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/06-DJ.mp3",
+				"Title": "DJ - 12+12+1",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/07-Geraldine.mp3",
+				"Title": "Geraldine - Dealing with the Feelings",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/08-TonyM.mp3",
+				"Title": "Tony M - Dealing with the Feelings",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/09-George.mp3",
+				"Title": "George - Being a newcomer",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/10-Helen.mp3",
+				"Title": "Helen - Being a newcomer",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/20-Mick-Intro.mp3",
+				"Title": "Mick - Intro",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/21-Convention-Committee.mp3",
+				"Title": "Convention Committee",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/22-Daniel.mp3",
+				"Title": "Daniel - Closing Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/ClosingMeeting-IRCNA20.mp3",
+				"Title": "IRCNA20 - CLosing Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/H&I_Workshop-IRCNA20.mp3",
+				"Title": "H+I Workshop - IRCNA20",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA20/MainSpeaker-ConorH-IRCNA20.mp3",
+				"Title": "Conor H - Main Speaker",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "IRCNA - 28 ",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Audrey-Darren.mp3",
+				"Title": "Audrey + Darren",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Dealing_with_death_in_recovery.mp3",
+				"Title": "Dealing with death in recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Kevin-sinead_opening_speakers.mp3",
+				"Title": "Kevin + Sinead - Opening speakers",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Recovery-relapse.mp3",
+				"Title": "Recovery + Relapse",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Saturday_night_Anthony-queens.mp3",
+				"Title": "Anthony Queens - Saturday Night",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/JamieP.mp3",
+				"Title": "Jamie P",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/SineadK-KevinMc.mp3",
+				"Title": "Sinead K + Kevin Mc",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/The_3rd_tradition.mp3",
+				"Title": "The 3rd Tradition",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/Tommy_my_first_na_meeting.mp3",
+				"Title": "Tommy - My first NA meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/carolann-tommy-olivia-tracy_my_first_na_meeting.mp3",
+				"Title": "Carolann, Tommy, Olivia, Tracy - My first NA meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/closing_meeting_clive-dee.mp3",
+				"Title": "Clive Dee - Closing Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/IRCNA28/spiritual_experience.mp3",
+				"Title": "Spiritual Experience",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "EASC - 15",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/H&I-JohnS-JoeR.mp3",
+				"Title": "JohnS JoeR",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/HelenC-mainspeaker.mp3",
+				"Title": "Helen C - Main Speaker",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/Jeff&glen_sponsor_sponsee_workshop.mp3",
+				"Title": "Jeff + Glen - Sponsor sponsee workshop",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/Opening_speakers_SharonH-KevinW.mp3",
+				"Title": "Sharon + Kevin - Opening Speakers",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/PaddyB-Jamie_mind_your_mind_workshop.mp3",
+				"Title": "Paddy B + Jamie - Mind Your Mind",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/TonyN-HelenG_illness_in_recovery.mp3",
+				"Title": "Tony N + Helen G - Illness In Recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC15/WillieDoNero_closing_speaker.mp3",
+				"Title": "Willie Do Nero - Closing Speaker",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "EASC - 17",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC17/BRIAN_D_MAIN_SHARE_EASC_XVII.mp3",
+				"Title": "Brian D - Main Speaker",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC17/EASC_XVII_MY_INTRO_TO_MY_FIRST_CONVENTION.mp3",
+				"Title": "My First Convention",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC17/LIVING_THE_PROGRAM_OLIVIA_J__GILLY_O.mp3",
+				"Title": "OliviaJ + Gilly O - Living the program",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC17/OPENING_SHARES_EASC_XVII_MAEVE__COLM_SILKY.mp3",
+				"Title": "Maeve + Colm Silky - Opening shares",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EASC17/RECOVERY_AND_RELAPSE_ANDY_AND_MICK.mp3",
+				"Title": "Andy + Mick - Recovery and Relapse",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "SASC - 10",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/SASC10/h&i_workshop1_10am_ballincollig15.mp3",
+				"Title": "Grainne, Wayne and Mark T - H&I Workshop",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/SASC10/workshop3_12_pm_ballincollig-filling_the_void.mp3",
+				"Title": "Joe C and Dee. - Filling that void",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/SASC10/workshop6-12_steps.mp3",
+				"Title": "Alan H + Caroline L  - Finding out who we really are through the 12 steps",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+
+		{
+		"convention_name": "ARCNA01",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/ARCNA01/RebeccaR_from_San_Francisco.mp3",
+				"Title": "Rebecca R - San Francisco",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "ARCNA20-2006",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/ARCNA20-2006/89592_18438.mp3",
+				"Title": "BillG on relationships - Never Alone",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "ARCNA21-2007",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/ARCNA21-2007/Chuck_H_Lake_Wells_FL_ARCNA_2007.mp3",
+				"Title": "Chuck H - Florida",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "BASCNA 17",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/BASCNA17/RaymondR-Brooklyn-NY-Mens-Rap-We_Do_Recover-BASCNA_NYNL_17-2011-Whippany_NJ.mp3",
+				"Title": "Raymond R - Mens Rap - We Do Recover",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "Birmingham - 2008",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/Birmingham-2008/nina_birmingham08.mp3",
+				"Title": "Nina",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/Birmingham-2008/ralph_birmingham08.mp3",
+				"Title": "Ralph",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/Birmingham-2008/sophie_birmingham08.mp3",
+				"Title": "Sophie",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "CAACNA-22",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/CAACNA22/Relationships_Sharing_the_Real_Me.mp3",
+				"Title": "Laura and Jimmy K - Woodbridge",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "CADNA - 1 ",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/CADNA1/Lorraine_from_San_Antonio_Tx_CADNA01.mp3",
+				"Title": "Lorraine - Texas",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "California - 2002",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/California-2002/yosteve-b-california2002128.mp3",
+				"Title": "Yo Steve B",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "EANAC - 1994 ",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/EANAC-1994/carmelitia.mp3",
+				"Title": "Carmelita",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "ECCNA - 08",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/ECCNA08/NA_European_Convention_08.mp3",
+				"Title": "Iona + Dwight",
+				"Duration": "3:40"
+				}
+			]
+		},
+
+		{
+		"convention_name": "WCNA - 31",
+		"speakers":
+			[
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-001Recovery%20is%20a%20Family%20AffairSusan%20M.%20New%20York.mp3",
+				"Title": "Recovery is a family affair",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-002My%20Recovery%20Ain't%20no%20Joke%20Mark%20L.%20California.mp3",
+				"Title": "My recovery aint no joke",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-003Our%20Guiding%20Principles%20Traditions%20and%20Concepts.mp3",
+				"Title": "Our guiding Principles, traditions and concepts",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-004Practicing%20Forgiveness%20in%20All%20my%20Affairs%20Theresa%20H.%20New%20MexicoJim%20G.%20North%20Carolina.mp3",
+				"Title": "Practicing forgiveness in all my affairs",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-006Changing%20the%20Nature%20of%20Our%20Relationships%20Algera%20TCaliforniaDickie%20D.%20Louisiana.mp3",
+				"Title": "Changing the nature of our relations",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-007Simple%20Program%20Tereza%20O.%20BrazilSteve%20Z.%20Washington.mp3",
+				"Title": "Simple program",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-008Kickoff%20Speaker%20Meeting%20Charles%20H.%20Florida%20.mp3",
+				"Title": "Kickoff Speaker Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-009Opening%20Main%20Meeting%20Archer%20K.%20HawaiiDerrick%20G.%20Hawaii.mp3",
+				"Title": "Opening Main Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-010Guide%20Me%20in%20My%20Recovery%20Grace%20C.%20Maryland%20Craig%20J.%20New%20Mexico.mp3",
+				"Title": "Guide me in my recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-011Learning%20to%20Trust%20Estelita%20C.%20New%20York%20Hamish%20A%20New%20Zealand.mp3",
+				"Title": "Learning to trust",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-012Living%20With%20Unresolved%20Problems%20Rena%20R%20Hawaii.mp3",
+				"Title": "Living with unresolved problems",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-013Infrastructure.mp3",
+				"Title": "Infrastructure",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-014Just%20For%20Today,%20Faith%20in%20NA%20Roy%20B.%20CaliforniaDiane%20R.%20Pennsylvania.mp3",
+				"Title": "Just for today Faith in NA",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-015Regardless%20of%20Religion,%20or%20lack%20of%20Religion%20Larry%20R.%20HawaiiDanny%20U.%20Indonesia.mp3",
+				"Title": "Regardless of religion or lack of religion",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-016The%20Apprentice%20Patty%20K.%20Canada%20Lonnie%20B.%20Pennsylvania.mp3",
+				"Title": "The Apprentice",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-018Atmosphere%20of%20Recovery%20What%20is%20it,%20How%20Do%20We%20Create%20It.mp3",
+				"Title": "Atmosphere of recovery - What is it?",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-019We%20Are%20Never%20Alone%20Mike%20B.%20Canada%20Diane%20R.%20Pennsylvania.mp3",
+				"Title": "We are never alone",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-020Someone%20Who%20Believes%20in%20Me%20Trish%20S.%20CaliforniaJimmy%20R.%20Maryland.mp3",
+				"Title": "Someone who believes in me",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-021Over%20Time,%20Not%20Overnight%20Karen%20E.%20MinnesotaMichael%20McD.%20Oregon.mp3",
+				"Title": "Over time, not overnight",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-022Becoming%20Entirely%20Ready%20Sandy%20M.%20FloridaBen%20C.%20Pennsylvania%20.mp3",
+				"Title": "Becoming entirely ready",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-023JazzBlues%20Luncheon%20Danny%20T.%20California%20.mp3",
+				"Title": "Jazz BLues - luncheon",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-024%20I%20Never%20Thought%20It%20Would%20Be%20This%20Good%20Tony%20G.%20NevadaKelly%20W.%20Washington%20.mp3",
+				"Title": "I never thought it would be this good",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-025Learning%20To%20Love%20Self%20and%20Others%20Sally%20G.%20CaliforniaAustin%20C.%20Ireland.mp3",
+				"Title": "Learning to love self and others",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-026%20One%20Message,%20Many%20Friends%20Panel%20From%20Arround%20the%20World%20.mp3",
+				"Title": "One message, many friends",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-027Standing%20For%20Something%20Musa%20K.%20CaliforniaTheresa%20N.%20Texas.mp3",
+				"Title": "Standing for something",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-028Regardless%20of%20...Age%20Sue%20H.%20AustrailiaDave%20G.%20Hawaii.mp3",
+				"Title": "Regardless of ...age",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-029%20Our%20Message%20is%20Hope%20Sian%20T.%20UK.mp3",
+				"Title": "Our message is hope",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-030%20Balancing%20Recovery%20and%20Family%20Debbie%20B.%20FloridaGary%20B.%20Florida%20.mp3",
+				"Title": "Balancing recovery and family",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-031Basic%20Text.mp3",
+				"Title": "Basic Text",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-032Extreme%20Makeover%20Mary%20Ellen%20P.%20CaliforniaBob%20F.%20New%20Jersey%20.mp3",
+				"Title": "Extreme makeover",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-033Evening%20Main%20Meeting%20Randy%20E.%20TexasMartin%20F.%20UK.mp3",
+				"Title": "Evening Main Meeting",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-034You%20Might%20Just%20Get%20What%20You%20Pray%20For%20Shmuel%20R.%20IsraelLorraine%20G.%20New%20York.mp3",
+				"Title": "You might just get what you pray for",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-035%20This%20New%20House%20Bella%20B.%20Austrailia%20.mp3",
+				"Title": "This new house",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-036Walking%20Through%20the%20Pain%20Jan%20C.%20Texas.mp3",
+				"Title": "Walking through the pain",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-038NA%20Fun-damentals%20Ann%20R.%20Hawaii.mp3",
+				"Title": "Fun-damentals",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-039Our%20Public%20Image%20Everyone's%20Responsibility.mp3",
+				"Title": "Our public image - Everyone's responsibility",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-040Just%20For%20Today,%20No%20Other%20Way%20Uzi%20L.%20Israel%20Laura%20A.%20New%20Jersey.mp3",
+				"Title": "Just for today, no other way",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-041Seeking%20Recovery%20for%20Risking%20Relapse%20Nicole%20L.%20MarylandStephen%20D.%20Texas.mp3",
+				"Title": "Seeking recovery for risking relapse",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-043Leadership%20in%20NA.mp3",
+				"Title": "Leadership in NA",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-044Over%20a%20Quarter%20Century%20Clean%20ands%20Loving%20It!%20Multiple%20Speakers%20.mp3",
+				"Title": "Over a quarter century clean and still loving it",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-045An%20Awaking%20of%20the%20Spirit%20Laurenda%20C.%20New%20YorkMark%20H.%20New%20Zealand.mp3",
+				"Title": "An awakening of the spirit",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-046Sponsorship%20The%20Heartbeat%20of%20Recovery%20Alexander%20S.%20Maryland%20Karen%20W.%20Missouri.mp3",
+				"Title": "Sponsorship - The heartbeat of recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-047Regardless%20of...Sexuality%20Shane%20C.%20CaliforniaJoni%20D.%20Illinois.mp3",
+				"Title": "Regardless of ...sexuality",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-048Afternoon%20Speaker%20Meeting%20Stephen%20K.%20Ireland.mp3",
+				"Title": "Stephen K - Ireland - Afternoon speaker",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-049Grieving%20in%20Recovery%20Lydia%20S.%20MarylandAndy%20D.%20Missouri.mp3",
+				"Title": "Grieving in recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-050Getting%20Clean,%20Living%20Clean%20Fran%20O.%20Hawaii.mp3",
+				"Title": "Getting clean - Living clean",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-051Responsible%20and%20Productive%20Wally%20I.%20Florida%20Roxanne%20C.%20Texas.mp3",
+				"Title": "Responsible and productive",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-052World%20Board%20Open%20Forum.mp3",
+				"Title": "World board - Open forum",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-053HP,%20Higher%20Power,%20Hi-Yah%20Pow-wah!!%20Tom%20C.%20Hawaii%20Tomoko%20N.%20Japan.mp3",
+				"Title": "HP, Higher Power, HiYah Pow-wah!!",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-054You%20Never%20Have%20to%20Use%20Again%20Bob%20S.%20California.mp3",
+				"Title": "You never have to use again",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-055Street%20Life%20to%20Sweet%20Life%20Jonathan%20W.%20Florida.mp3",
+				"Title": "Street life to sweet life",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-056A%20New%20Way%20to%20Live%20Wallace%20R.%20California.mp3",
+				"Title": "A new way to live",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-057History%20of%20NA.mp3",
+				"Title": "History of NA",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-058From%20Rude%20Awakenings%20to%20spiritual%20Awakenings%20Boots%20B.%20Hawaii.mp3",
+				"Title": "From rude awakening to spiritual awakening",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-059Embracing%20the%20Gift%20of%20Recovery%20Susan%20B.%20Minnesota%20Hans-Georg%20M.%20Switzerland.mp3",
+				"Title": "Embracing the gift of recovery",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-060Unity%20Banquet%20and%20Meeting%20with%20Geographic%20Countdown%20Horacio%20R.%20ArgentinaMahmud%20IranLuigi%20.mp3",
+				"Title": "Unity, Banquet, meeting with geographic countdown",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-060Unity%20Banquet%20and%20Meeting%20with%20Geographic%20Countdown%20Horacio%20R.%20ArgentinaMahmud%20IranLuigi2.mp3",
+				"Title": "Unity, Banquet, meeting with geographic countdown",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-061Saturday%20Night%20Live%20David%20J.%20CaliforniaJudy%20G.%20Hawaii.mp3",
+				"Title": "Saturday Night Live",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-062Walk%20The%20Talk%20Allison%20C.%20California.mp3",
+				"Title": "Walk the Talk",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-063From%20Depression%20to%20Passion%20Penny%20S.%20North%20Carolina%20.mp3",
+				"Title": "From depression to passion",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-064...And%20the%20Power%20to%20Carry%20it%20Out%20Jaque%20B.%20California.mp3",
+				"Title": "...and the power to carry it out",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-065World%20Unity%20Day%20Celebration%20Gina%20S.%20New%20York.mp3",
+				"Title": "World Unity Day Celebration",
+				"Duration": "3:40"
+				},
+				{
+				"fileName": "http://www.nasouth.ie/docs/mp3/NA05/NA05-066Mahalo%20Cruise%20Billy%20A%20Massachusetts.mp3",
+				"Title": "Mahalo Cruise",
+				"Duration": "3:40"
+				}
+			]
+		}
+
+	]
+}

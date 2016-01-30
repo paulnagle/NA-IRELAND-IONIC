@@ -1,0 +1,47 @@
+<ion-view view-title="Western Area">
+<ion-view hide-back-button="true">
+  <ion-nav-buttons side="left">
+     <button class="button button-assertive" ui-sref="app.meetinglist">
+          <i class="menu-icon icon ion-ios-arrow-left"></i>
+     </button>
+  </ion-nav-buttons>
+
+  <ion-nav-title>
+    <span>Western Area</span>
+  </ion-nav-title>
+
+  <ion-content>
+    <ion-list>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Galway'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Galway</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Leitrim'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Leitrim</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Longford'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Longford</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Mayo'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Mayo</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Roscommon'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Roscommon</h2>
+      </ion-item>
+
+      <ion-item ui-sref-active="active" class="item-icon-right" menu-close ui-sref="app.western-meetings({countyName: 'Sligo'})">
+        <i class="menu-icon icon ion-chevron-right"></i>
+        <h2 class="menu-text">Sligo</h2>
+      </ion-item>
+
+  </ion-content>
+</ion-view>
