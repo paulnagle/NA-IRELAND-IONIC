@@ -193,9 +193,9 @@ angular.module('na_ireland.controllers', [])
 	};
 })
 
-// Audio controller
+// List of speakers page controller
 .controller('AudioController', function($scope, $ionicLoading, $http) {
-	$ionicLoading.show({template: 'Loading...'});
+	$ionicLoading.show({content: '<i class="icon ion-refreshing"></i>'});
 	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
 		$scope.conventionList = [];
 		angular.forEach(response.data.Conventions, function(value, key) {
@@ -216,6 +216,28 @@ angular.module('na_ireland.controllers', [])
 	$scope.stop = function() {
 			console.log("stopping media");
 			media.stop();
+	};
+
+	$scope.rewind = function() {
+		if (media)
+		{
+			media.getCurrentPosition(media).then(function(res) {
+			var mediaPosition = res - 15;
+			var mediaInMilli = mediaPosition*1000;
+			media.seekTo(mediaInMilli);
+			});
+		}
+	};
+
+	$scope.fastForward = function() {
+		if (media)
+		{
+			media.getCurrentPosition(media).then(function(res) {
+			var mediaPosition = res + 15;
+			var mediaInMilli = mediaPosition*1000;
+			media.seekTo(mediaInMilli);
+			});
+		}
 	};
 
 	var mediaStatusCallback = function(status) {
