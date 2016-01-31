@@ -205,40 +205,30 @@ angular.module('na_ireland.controllers', [])
 	});
 })
 
-.controller('SpeakerController', function($scope, $ionicLoading, $stateParams, $state) {
+.controller('SpeakerController', function($scope, $ionicLoading, $stateParams, $state, $ionicPlatform, $interval, $cordovaMedia) {
 
 	var media = new Media($stateParams.fileName, null, null, mediaStatusCallback);
 
 	$scope.play = function(src) {
+		if (media)
+		{
 			media.play();
+		}
 	};
 
 	$scope.stop = function() {
-			console.log("stopping media");
+		if (media)
+		{
 			media.stop();
-	};
-
-	$scope.rewind = function() {
-		if (media)
-		{
-			media.getCurrentPosition(media).then(function(res) {
-			var mediaPosition = res - 15;
-			var mediaInMilli = mediaPosition*1000;
-			media.seekTo(mediaInMilli);
-			});
 		}
 	};
 
-	$scope.fastForward = function() {
-		if (media)
-		{
-			media.getCurrentPosition(media).then(function(res) {
-			var mediaPosition = res + 15;
-			var mediaInMilli = mediaPosition*1000;
-			media.seekTo(mediaInMilli);
-			});
-		}
-	};
+	$scope.pause = function() {
+     if (media)
+     {
+       media.pause();
+     }
+   };
 
 	var mediaStatusCallback = function(status) {
 			if(status == 1) {
@@ -246,7 +236,7 @@ angular.module('na_ireland.controllers', [])
 			} else {
 					$ionicLoading.hide();
 			}
-	};
+	}; 
 
 	$scope.conventionName = $stateParams.conventionName;
 	$scope.speakerName    = $stateParams.speakerName;
@@ -260,6 +250,10 @@ angular.module('na_ireland.controllers', [])
 			stateChangeListener();
 		}
 	});
+
+	$scope.$on('destroy', function() {
+		media.release();
+ });
 
 })
 ;

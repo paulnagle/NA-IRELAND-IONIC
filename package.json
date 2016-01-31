@@ -52,7 +52,7 @@
     "org.apache.cordova.media"
   ],
   "cordovaPlatforms": [
-    "ios",
-    "android"
+    "android",
+    "ios"
   ]
 }

@@ -1,106 +1,159 @@
 {
-  "_args": [
-    [
-      "angular-filter",
-      "/Users/paulnagle/ionicNa-Ireland"
-    ]
-  ],
-  "_from": "angular-filter@latest",
-  "_id": "angular-filter@0.5.8",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/angular-filter",
-  "_npmUser": {
-    "email": "ariel@mashraki.co.il",
-    "name": "a8m"
-  },
-  "_npmVersion": "1.4.28",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "angular-filter",
-    "raw": "angular-filter",
-    "rawSpec": "",
-    "scope": null,
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/angular-filter/-/angular-filter-0.5.8.tgz",
-  "_shasum": "54b1c7af7a92fa9b8d38bf804f4505e800496d0b",
-  "_shrinkwrap": null,
-  "_spec": "angular-filter",
-  "_where": "/Users/paulnagle/ionicNa-Ireland",
-  "author": {
-    "email": "ariel@mashraki.co.il",
-    "name": "Ariel Mashraki"
-  },
-  "bugs": {
-    "url": "https://github.com/a8m/angular-filter/issues"
-  },
-  "dependencies": {
-    "angular": "*"
-  },
-  "description": "Bunch of useful filters for angularJS(with no external dependencies!)",
-  "devDependencies": {
-    "coveralls": "~2.11.1",
-    "grunt": "^0.4.1",
-    "grunt-bower": "*",
-    "grunt-bower-task": "*",
-    "grunt-cli": ">= 0.1.7",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-conventional-changelog": "0.0.12",
-    "grunt-coveralls": "~0.3.0",
-    "grunt-karma": "^0.12.0",
-    "grunt-karma-coveralls": "~2.5.1",
-    "grunt-zip": "*",
-    "karma": "^0.13.8",
-    "karma-chrome-launcher": "~0.1.2",
-    "karma-coverage": "~0.2.4",
-    "karma-firefox-launcher": "~0.1.3",
-    "karma-jasmine": "~0.1.5",
-    "karma-phantomjs-launcher": "~0.1.4"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "54b1c7af7a92fa9b8d38bf804f4505e800496d0b",
-    "tarball": "http://registry.npmjs.org/angular-filter/-/angular-filter-0.5.8.tgz"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "filename": "angular-filter.min.js",
-  "gitHead": "eadb09d9fd168f67d4b2129771f64b8202ff8e30",
-  "homepage": "https://github.com/a8m/angular-filter",
-  "keywords": [
-    "angular",
-    "browser",
-    "client",
-    "collection",
-    "filter",
-    "lodash",
-    "underscore"
-  ],
-  "license": "MIT",
-  "main": "dist/angular-filter.min.js",
-  "maintainers": [
-    {
-      "name": "a8m",
-      "email": "ariel@mashraki.co.il"
-    }
-  ],
-  "name": "angular-filter",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "name": "ionic-platform-web-client",
+  "version": "0.2.1",
+  "description": "Ionic platform web client",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a8m/angular-filter.git"
+    "url": "git+https://github.com/driftyco/ionic-platform-web-client.git"
   },
-  "scripts": {
-    "test": "grunt test --verbose"
+  "keywords": [
+    "Ionic",
+    "ionic",
+    "platform",
+    "web",
+    "client"
+  ],
+  "author": "Ionic",
+  "contributors": [
+    "Eric Bobbitt <eric@drifty.com>",
+    "William Pelrine <rudy@drifty.com>"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/driftyco/ionic-platform-web-client/issues"
   },
-  "version": "0.5.8"
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "globals": {
+      "Ionic": true,
+      "angular": true,
+      "Connection": true,
+      "PushNotification": true,
+      "IonicDeploy": true
+    },
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-extra-semi": 2,
+      "valid-jsdoc": [
+        2,
+        {}
+      ],
+      "curly": 2,
+      "dot-notation": 2,
+      "eqeqeq": 2,
+      "no-eval": 2,
+      "no-process-env": 2,
+      "no-return-assign": 2,
+      "no-script-url": 2,
+      "no-self-compare": 2,
+      "no-sequences": 2,
+      "radix": 2,
+      "wrap-iife": [
+        2,
+        "inside"
+      ],
+      "array-bracket-spacing": [
+        2,
+        "never"
+      ],
+      "block-spacing": [
+        2,
+        "always"
+      ],
+      "brace-style": [
+        2,
+        "1tbs",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "comma-style": [
+        2,
+        "last"
+      ],
+      "camelcase": [
+        2,
+        {
+          "properties": "always"
+        }
+      ],
+      "key-spacing": [
+        2,
+        {
+          "beforeColon": false,
+          "afterColon": true
+        }
+      ],
+      "func-style": [
+        2,
+        "declaration"
+      ],
+      "linebreak-style": [
+        2,
+        "unix"
+      ],
+      "new-cap": 2,
+      "new-parens": 2,
+      "no-mixed-spaces-and-tabs": 2,
+      "no-trailing-spaces": 2,
+      "no-spaced-func": 2,
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "quote-props": 2,
+      "semi": [
+        2,
+        "always"
+      ],
+      "space-after-keywords": 2,
+      "space-before-blocks": 2,
+      "space-before-function-paren": [
+        2,
+        "never"
+      ],
+      "space-infix-ops": 2,
+      "space-return-throw-case": 2,
+      "space-unary-ops": 2,
+      "spaced-comment": [
+        2,
+        "always"
+      ]
+    }
+  },
+  "homepage": "https://github.com/driftyco/ionic-platform-web-client#readme",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.2.0",
+    "browser-request": "^0.3.3",
+    "browserify": "^11.0.1",
+    "del": "^2.0.2",
+    "es6-promise": "^3.0.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-footer": "^1.0.4",
+    "gulp-header": "^1.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^2.2.16",
+    "gulp-watch": "^0.6.5"
+  }
 }
