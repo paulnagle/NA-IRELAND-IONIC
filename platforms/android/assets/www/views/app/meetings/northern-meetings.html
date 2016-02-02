@@ -13,14 +13,14 @@
         <input type="search" placeholder="Search Address" ng-model="searchText" ng-change="" ng-model-options="{debounce: 350}">
       </label>
     </ion-header-bar>
-    
+
     <ion-nav-title>
       <span>{{heading}}</span>
     </ion-nav-title>
 
     <ion-content>
       <div class="card" ng-repeat="x in contents | filter:searchText">
-        <div class="item item-positive item-divider">
+        <div class="item item-divider">
           <i class="icon ion-ios-calendar"></i>
           <b>
             {{dayOfWeekAsString(x.weekday_tinyint)}}
