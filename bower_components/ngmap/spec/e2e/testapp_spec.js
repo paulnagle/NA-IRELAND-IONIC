@@ -1,52 +1,58 @@
-/*global jasmine*/
-var excludes = [
-  "index.html",
-  "map_events.html", 
-  "map_lazy_init.html", 
-  "map-lazy-load.html", 
-  "marker_with_dynamic_position.html",
-  "marker_with_dynamic_address.html",
-  "marker_with_info_window.html",
-  "places-auto-complete.html",
-  "street-view_road_trip.html"
+'use strict';
+var argv = require('yargs').argv; 
+
+/*global document, afterEach*/
+var excludes = [ // these examples has no ng-map
+  "all-examples.html",
+  "map_events.html",
+  "map_lazy_init.html",
+  "map-lazy-load.html",
+  "map-lazy-load-params.html",
+  "places-auto-complete.html"
 ];
 
-function using(values, func){
-  'use strict';
-  for (var i = 0, count = values.length; i < count; i++) {
-    (!Array.isArray(values[i])) && (values[i] = [values[i]]);
-    func.apply(this, values[i]);
-    jasmine.currentEnv_.currentSpec.description += ' (with using ' + values[i].join(', ') + ')';
-  }
+var filesRE = argv.files == 'undefined' ? null : new RegExp(argv.files);
+console.log('filesRE', filesRE);
+
+function using(filename, func){
+  func.apply(this, [filename]); //jshint ignore:line
 }
 
 describe('testapp directory', function() {
-  'use strict';
-  var files = require('fs').readdirSync(__dirname + "/../../testapp");
-  var urls = files.filter(function(filename) { 
-    return filename.match(/\.html$/) && excludes.indexOf(filename) === -1; 
+  var allFiles = require('fs').readdirSync(__dirname + "/../../testapp");
+  allFiles = allFiles.filter(function(filename) {
+    return (
+      filename.match(/\.html$/) &&
+      excludes.indexOf(filename) === -1 &&
+      (filesRE ? filename.match(filesRE) : true)
+    );
   });
-  console.log('urls', urls);
+  console.log('files to run', allFiles);
 
-  using(urls, function(url){
+  //TODO: apply retry when it has console error. e.g. google image 404 error
+  allFiles.forEach(function(filename) {
+    using(filename, function(url){
+      it('testapp/'+url, function() {
+        browser.get('testapp/'+url);
 
-    it('testapp/'+url, function() {
-      browser.get(url);
-      browser.wait( function() {
-        return browser.executeScript( function() {
-          var el = document.querySelector("map");  
-          var scope = angular.element(el).scope();
-          return scope.map.getCenter();
-        }).then(function(result) {
-          return result;
+        browser.wait( function() {
+          return browser.executeScript( function() {
+            var el = document.querySelector("ng-map");
+            var injector = angular.element(el).injector();
+            var NgMap = injector.get('NgMap');
+            return NgMap.getMap();
+          }).then(function(map) {
+            return map;
+          });
+        }, 2000);
+
+        browser.manage().logs().get('browser').then(function(browserLog) {
+          expect(browserLog.length).toEqual(0);
+          browserLog.length && console.log(JSON.stringify(browserLog));
         });
-      }, 5000);
-      browser.manage().logs().get('browser').then(function(browserLog) {
-        (browserLog.length > 0) && console.log('log: ' + require('util').inspect(browserLog));
-        expect(browserLog).toEqual([]);
+
       });
     });
-
   });
 
 });

@@ -10,15 +10,6 @@
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
-        "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "com.synconset.imagepicker": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
@@ -31,6 +22,9 @@
         "cordova-plugin-extension": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+        },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
@@ -40,19 +34,13 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "de.appplant.cordova.plugin.email-composer": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "org.apache.cordova.file": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "org.apache.cordova.media": {
             "PACKAGE_NAME": "ie.nasouth.android.naireland"
         }
     },

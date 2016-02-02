@@ -14,25 +14,22 @@
     <div class="list card" ng-repeat="convention in conventionList">
       <div class="item item-thumbnail-left">
         <img src="img/conference.png">
-        <ion-list>
         <h1>{{convention.convention_name}}</h1>
         <hr>
       </div>
-      <div>
-        <ion-item ng-repeat="speaker in convention.speakers">
-          <a class="item item-icon-right" href={{speaker.fileName}}>
-            <ion-item ui-sref-active="active"
-                      class="item-icon-right"
-                      menu-close
-                      ui-sref="app.speaker({conventionName: convention.convention_name,
-                                            speakerName:    speaker.Title,
-                                            fileName:       speaker.fileName})">
-              <i class="menu-icon icon ion-mic-a"></i>
-              <h2 class="menu-text">{{speaker.Title}}</h2>
-            </ion-item>
-        </ion-item>
-      </ion-list>
-      </div>
+
+      <ul ng-repeat="speaker in convention.speakers">
+        <a class="item item-icon-right" href={{speaker.fileName}}>
+          <li ui-sref-active="active"
+                    class="item-icon-right"
+                    menu-close
+                    ui-sref="app.speaker({conventionName: convention.convention_name,
+                                          speakerName:    speaker.Title,
+                                          fileName:       speaker.fileName})">
+            <i class="menu-icon icon ion-mic-a"></i>
+            <h2 class="menu-text">{{speaker.Title}}</h2>
+          </li>
+      </ul>
     </div>
 
   </ion-content>

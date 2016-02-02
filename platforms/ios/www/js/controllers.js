@@ -230,13 +230,45 @@ angular.module('na_ireland.controllers', [])
      }
    };
 
+	$scope.rewind = function() {
+		if (media)
+		{
+			$cordovaMedia.getCurrentPosition(media).then(function(res) {
+			var mediaPosition = res - 15;
+			var mediaInMilli = mediaPosition*1000;
+			media.seekTo(mediaInMilli);
+			});
+		}
+	};
+
+	$scope.fastForward = function() {
+		if (media)
+		{
+			$cordovaMedia.getCurrentPosition(media).then(function(res) {
+			var mediaPosition = res + 15;
+			var mediaInMilli = mediaPosition*1000;
+			media.seekTo(mediaInMilli);
+			});
+		}
+	};
+
 	var mediaStatusCallback = function(status) {
 			if(status == 1) {
 					$ionicLoading.show({template: 'Loading...'});
 			} else {
 					$ionicLoading.hide();
 			}
-	}; 
+	};
+
+	$scope.model = {};
+
+
+	var dur = media.getDuration();
+
+	console.log("Track duration = " + dur + " sec");
+
+
+
 
 	$scope.conventionName = $stateParams.conventionName;
 	$scope.speakerName    = $stateParams.speakerName;
@@ -250,10 +282,6 @@ angular.module('na_ireland.controllers', [])
 			stateChangeListener();
 		}
 	});
-
-	$scope.$on('destroy', function() {
-		media.release();
- });
 
 })
 ;

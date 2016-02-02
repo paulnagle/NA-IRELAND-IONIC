@@ -1,24 +1,25 @@
 /**
  * @ngdoc directive
  * @name transit-layer
- * @requires Attr2Options 
- * @description 
+ * @param Attr2MapOptions {service} convert html attribute to Gogole map api options
+ * @description
  *   Requires:  map directive
  *   Restrict To:  Element
  *
  * @example
- * Example: 
+ * Example:
  *
- *   <map zoom="13" center="34.04924594193164, -118.24104309082031">
- *     <transit-layer></transit-layer>
- *    </map>
+ *  <map zoom="13" center="34.04924594193164, -118.24104309082031">
+ *    <transit-layer></transit-layer>
+ *  </map>
  */
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('transitLayer', ['Attr2Options', function(Attr2Options) {
-    var parser = Attr2Options;
-    
+  angular.module('ngMap').directive('transitLayer', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+
     var getLayer = function(options, events) {
       var layer = new google.maps.TransitLayer(options);
       for (var eventName in events) {
@@ -26,15 +27,17 @@
       }
       return layer;
     };
-    
+
     return {
       restrict: 'E',
-      require: '^map',
+      require: ['?^map','?^ngMap'],
 
       link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+
         var orgAttrs = parser.orgAttributes(element);
         var filtered = parser.filter(attrs);
-        var options = parser.getOptions(filtered);
+        var options = parser.getOptions(filtered, {scope: scope});
         var events = parser.getEvents(scope, filtered);
         console.log('transit-layer options', options, 'events', events);
 

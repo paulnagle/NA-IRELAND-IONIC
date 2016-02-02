@@ -8,7 +8,6 @@ angular.module('underscore', [])
 // the 2nd parameter is an array of 'requires'
 angular.module('na_ireland', [
   'ionic','ionic.service.core',
-  
   'angularMoment',
   'na_ireland.controllers',
   'na_ireland.directives',
@@ -25,7 +24,7 @@ angular.module('na_ireland', [
   'ionic-datepicker'
 ])
 
-.run(function($ionicPlatform, $rootScope, $ionicConfig, $timeout) {
+.run(function($ionicPlatform, $rootScope, $ionicConfig, $timeout,$cordovaSplashscreen ) {
 
   $ionicPlatform.on("deviceready", function(){
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -36,8 +35,10 @@ angular.module('na_ireland', [
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-
+      $cordovaSplashscreen.hide();
   });
+
+
 
 
   // Disable BACK button except to exit the app from the first page
