@@ -39,7 +39,6 @@ angular.module('na_ireland.controllers', [])
 
 	$scope.refreshSearch = function(){
 		$ionicScrollDelegate.$getByHandle('mainScroll').scrollTop();
-		console.log("BOOM");
 	};
 
 	$scope.openMapsLink = function(destLatitude, destLongitude){
@@ -209,7 +208,12 @@ angular.module('na_ireland.controllers', [])
 })
 
 // List of speakers page controller
-.controller('AudioController', function($scope, $ionicLoading, $http) {
+.controller('AudioController', function($scope, $ionicLoading, $http, $ionicScrollDelegate) {
+
+	$scope.refreshSearch = function(){
+		$ionicScrollDelegate.$getByHandle('speakerScroll').scrollTop();
+	};
+
 	$ionicLoading.show({content: '<i class="icon ion-refreshing"></i>'});
 	$http.get("http://android.nasouth.ie/conventions.json").then(function(response){
 		$scope.conventionList = [];
