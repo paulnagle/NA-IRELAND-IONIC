@@ -27,7 +27,6 @@ angular.module('na_ireland.factories', [])
 
   return {
     getMarkers: function(){
-
       return $http.get("http://bmlt.nasouth.ie/main_server/client_interface/json/?switcher=GetSearchResults&data_field_key=weekday_tinyint,start_time,longitude,latitude,meeting_name,location_text,location_sub_province,location_street,location_info,formats&sort_keys=longitude,latitude").then(function(response){
         markers = response;
         return markers;
@@ -39,6 +38,10 @@ angular.module('na_ireland.factories', [])
 .factory('GoogleMaps', function($cordovaGeolocation, $ionicLoading, Markers){
   var apiKey = false;
   var map = null;
+
+  function dayOfWeekAsString(dayIndex) {
+    return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
+  };
 
   function initMap(){
     console.log("initing maps...");
@@ -52,6 +55,7 @@ angular.module('na_ireland.factories', [])
       };
 
       map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
       //Wait until the map is loaded
       google.maps.event.addListenerOnce(map, 'idle', function(){
         //Load the markers
@@ -66,6 +70,8 @@ angular.module('na_ireland.factories', [])
   }
 
   function loadMarkers(){
+      var clusterMarkers = [];
+
       //Get all of the markers from our Markers factory
       Markers.getMarkers().then(function(markers){
         console.log("Markers: ", markers);
@@ -74,18 +80,34 @@ angular.module('na_ireland.factories', [])
           var record = records[i];
           var markerPos = new google.maps.LatLng(record.latitude, record.longitude);
 
-          // Add the markerto the map
+          // Add the marker to the map
           var marker = new google.maps.Marker({
               map: map,
               position: markerPos
           });
 
-          var infoWindowContent = "<h4>" + record.meeting_name + "</h4>";
-          infoWindowContent += "<p>" + record.location_text +"</p>";
-          infoWindowContent += "<p>" + record.location_street +"</p>";
-          infoWindowContent += "<p>" + record.location_info +"</p>";
+          var infoWindowContent = "";
+          if (record.meeting_name != "NA Meeting") {
+            infoWindowContent += "<h3>" + record.meeting_name + "</h3>";
+          }
+          var time = record.start_time;
+          infoWindowContent += "<h4>" + dayOfWeekAsString(record.weekday_tinyint) + "&nbsp" + time.substring(0, 5) + "</h4>";
+          if (record.location_text != "") {
+            infoWindowContent += "<p>" + record.location_text +"</p>";
+          }
+          if (record.location_street) {
+            infoWindowContent += "<p>" + record.location_street +"</p>";
+          }
+          if (record.location_info) {
+            infoWindowContent += "<p>" + record.location_info +"</p>";
+          }
+          if (record.formats) {
+            infoWindowContent += "<p><dfn> Formats : " + record.formats + "</dfn></p>";
+          }
           addInfoWindow(marker, infoWindowContent, record);
+          clusterMarkers.push(marker);
         }
+        var markerCluster = new MarkerClusterer(map, clusterMarkers);
         $ionicLoading.hide();
       });
   }
