@@ -26,19 +26,22 @@ angular.module('na_ireland.controllers', [])
 
 // Meetings List view controller
 .controller('MeetingsCtrl', function($scope, $stateParams, $ionicLoading, $ionicHistory, GetCountyMeetings){
+
+	$scope.dayOfWeekAsString = function(dayIndex) {
+		return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
+	};
+
 	$ionicLoading.show({content: '<i class="icon ion-refreshing"></i>'});
 	var meetings = GetCountyMeetings.getMeetings($stateParams.countyName).then(function(meetings){
 		$scope.contents = meetings;
 		$ionicLoading.hide();
 	});
 
+
+
 	$scope.openMapsLink = function(destLatitude, destLongitude){
 		window.open('http://maps.google.com/maps?daddr=' + destLatitude + ',' + destLongitude, '_system', 'location=yes');
 		return false;
-	};
-
-	$scope.dayOfWeekAsString = function(dayIndex) {
-		return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
 	};
 
 	$scope.heading = $stateParams.countyName;

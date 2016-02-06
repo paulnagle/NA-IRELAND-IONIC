@@ -21,7 +21,8 @@ angular.module('na_ireland', [
   'ngResource',
   'ngCordova',
   'slugifier',
-  'ionic-datepicker'
+  'ionic-datepicker',
+  'angular.filter'
 ])
 
 .run(function($ionicPlatform, $rootScope, $ionicConfig, $timeout,$cordovaSplashscreen ) {
