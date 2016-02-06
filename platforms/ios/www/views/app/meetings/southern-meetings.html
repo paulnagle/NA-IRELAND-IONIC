@@ -1,26 +1,28 @@
 <div ng-controller="MeetingsCtrl">
   <ion-view view-title="{{heading}}" hide-back-button="true">
     <ion-nav-buttons side="left">
-       <button class="button button-assertive" ui-sref="app.southerm">
+       <button class="button button-assertive" ui-sref="app.southern">
          <i class="menu-icon icon ion-ios-arrow-left"></i>
        </button>
     </ion-nav-buttons>
     <ion-header-bar align-title="left" class="bar-subheader item-input-inset ">
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="Search Address" ng-model="searchText" ng-change="" ng-model-options="{debounce: 350}">
+        <input type="search" placeholder="Search Address" ng-model="searchText" ng-change="refreshSearch()" ng-model-options="{debounce: 350}">
       </label>
     </ion-header-bar>
     <ion-nav-title>
       <span>{{heading}}</span>
     </ion-nav-title>
-    <ion-content>
+    <ion-content delegate-handle="mainScroll">
       <ion-list>
-        <ul ng-repeat="(key, value) in contents | groupBy: 'weekday_tinyint' ">
-          <li class="item item-divider">
+        <div ng-repeat="(key, value) in contents | groupBy: 'weekday_tinyint' ">
+
+          <ion-item class="item item-divider">
             <h1>{{ dayOfWeekAsString(key) }}</h1>
-          </li>
-          <li class="item" ng-repeat="x in value | filter:searchText">
+          </ion-item>
+
+          <ion-item class="item" ng-repeat="x in value | filter:searchText">
             <b>{{ dayOfWeekAsString(key) }}&nbsp;&nbsp;{{ x.start_time | limitTo: 5}}</b>
             <div class="row">
               <div class="col-75 text-left">
@@ -57,8 +59,9 @@
                 </a>
               </div>
             </div>
-          </li>
-        </ul>
+          </ion-item>
+
+        </div>
       </ion-list>
     </ion-content>
   </ion-view>
