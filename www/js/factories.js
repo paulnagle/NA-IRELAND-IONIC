@@ -38,78 +38,87 @@ angular.module('na_ireland.factories', [])
 .factory('GoogleMaps', function($cordovaGeolocation, $ionicLoading, Markers){
   var apiKey = false;
   var map = null;
+  var markerClusterer;
+  var infoWindows = [];
 
   function dayOfWeekAsString(dayIndex) {
     return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
   };
 
   function initMap(){
-    console.log("initing maps...");
     var options = {timeout: 10000, enableHighAccuracy: true};
     $cordovaGeolocation.getCurrentPosition(options).then(function(position){
       var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       var mapOptions = {
         center: latLng,
         zoom: 9,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        maxZoom: 15
       };
 
       map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-      //Wait until the map is loaded
+      // Add a marker clusterer
+      markerClusterer = new MarkerClusterer(map);
+      minClusterZoom = 14;
+      markerClusterer.setMaxZoom(minClusterZoom);
+
+      // Add an overlapping marker spiderifier
+      oms = new OverlappingMarkerSpiderfier(map, {
+        markersWontMove: true,
+        markersWontHide: true,
+        keepSpiderfied: true
+      });
+
+      //Wait until the map is loaded, then load the markers
       google.maps.event.addListenerOnce(map, 'idle', function(){
         //Load the markers
-        console.log("loading markers...");
         loadMarkers();
       });
     }, function(error){
-      console.log("Could not get location");
         //Load the markers
         loadMarkers();
     });
   }
 
   function loadMarkers(){
-      var clusterMarkers = [];
+    //Get all of the markers from our Markers factory
+    Markers.getMarkers().then(function(markers){
+      var records = markers.data;
+      for (var i = 0; i < records.length; i++) {
+        var record = records[i];
+        var markerPos = new google.maps.LatLng(record.latitude, record.longitude);
 
-      //Get all of the markers from our Markers factory
-      Markers.getMarkers().then(function(markers){
-        console.log("Markers: ", markers);
-        var records = markers.data;
-        for (var i = 0; i < records.length; i++) {
-          var record = records[i];
-          var markerPos = new google.maps.LatLng(record.latitude, record.longitude);
+        // Add the marker to the map
+        var marker = new google.maps.Marker({
+            map: map,
+            position: markerPos
+        });
 
-          // Add the marker to the map
-          var marker = new google.maps.Marker({
-              map: map,
-              position: markerPos
-          });
-
-          var infoWindowContent = "";
-          if (record.meeting_name != "NA Meeting") {
-            infoWindowContent += "<h3>" + record.meeting_name + "</h3>";
-          }
-          var time = record.start_time;
-          infoWindowContent += "<h4>" + dayOfWeekAsString(record.weekday_tinyint) + "&nbsp" + time.substring(0, 5) + "</h4>";
-          if (record.location_text != "") {
-            infoWindowContent += "<p>" + record.location_text +"</p>";
-          }
-          if (record.location_street) {
-            infoWindowContent += "<p>" + record.location_street +"</p>";
-          }
-          if (record.location_info) {
-            infoWindowContent += "<p>" + record.location_info +"</p>";
-          }
-          if (record.formats) {
-            infoWindowContent += "<p><dfn> Formats : " + record.formats + "</dfn></p>";
-          }
-          addInfoWindow(marker, infoWindowContent, record);
-          clusterMarkers.push(marker);
+        var infoWindowContent = "";
+        if (record.meeting_name != "NA Meeting") {
+          infoWindowContent += "<h3>" + record.meeting_name + "</h3>";
         }
-        var markerCluster = new MarkerClusterer(map, clusterMarkers);
-        $ionicLoading.hide();
-      });
+        var time = record.start_time;
+        infoWindowContent += "<h4>" + dayOfWeekAsString(record.weekday_tinyint) + "&nbsp" + time.substring(0, 5) + "</h4>";
+        if (record.location_text != "") {
+          infoWindowContent += "<p>" + record.location_text +"</p>";
+        }
+        if (record.location_street) {
+          infoWindowContent += "<p>" + record.location_street +"</p>";
+        }
+        if (record.location_info) {
+          infoWindowContent += "<p>" + record.location_info +"</p>";
+        }
+        if (record.formats) {
+          infoWindowContent += "<p><dfn> Formats : " + record.formats + "</dfn></p>";
+        }
+        addInfoWindow(marker, infoWindowContent, record);
+        markerClusterer.addMarker(marker);
+        oms.addMarker(marker);
+      }
+      $ionicLoading.hide();
+    });
   }
 
   function addInfoWindow(marker, message, record) {
@@ -117,9 +126,19 @@ angular.module('na_ireland.factories', [])
           content: message
       });
 
+      //add infowindow to array
+      infoWindows.push(infoWindow);
+
       google.maps.event.addListener(marker, 'click', function () {
-          infoWindow.open(map, marker);
+        closeAllInfoWindows();
+        infoWindow.open(map, marker);
       });
+  }
+
+  function closeAllInfoWindows() {
+    for (var i=0;i<infoWindows.length;i++) {
+       infoWindows[i].close();
+    }
   }
 
   return {
