@@ -16,7 +16,8 @@
     "bourbon": "^4.2.3",
     "angular-timer": "^1.3.3",
     "ionic-datepicker": "^0.9.0",
-    "ionic-service-core": "^0.1.10"
+    "ionic-service-core": "^0.1.10",
+    "angular-bootstrap": "^1.1.2"
   },
   "resolutions": {
     "angular": "^1.4.3"

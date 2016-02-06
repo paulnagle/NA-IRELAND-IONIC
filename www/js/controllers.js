@@ -25,7 +25,7 @@ angular.module('na_ireland.controllers', [])
 })
 
 // Meetings List view controller
-.controller('MeetingsCtrl', function($scope, $stateParams, $ionicLoading, $ionicHistory, GetCountyMeetings){
+.controller('MeetingsCtrl', function($scope, $stateParams, $ionicLoading, $ionicHistory, $ionicScrollDelegate, GetCountyMeetings){
 
 	$scope.dayOfWeekAsString = function(dayIndex) {
 		return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
@@ -37,7 +37,10 @@ angular.module('na_ireland.controllers', [])
 		$ionicLoading.hide();
 	});
 
-
+$scope.refreshSearch = function(){
+	$ionicScrollDelegate.$getByHandle('mainScroll').scrollTop();
+	console.log("BOOM");
+}
 
 	$scope.openMapsLink = function(destLatitude, destLongitude){
 		window.open('http://maps.google.com/maps?daddr=' + destLatitude + ',' + destLongitude, '_system', 'location=yes');
