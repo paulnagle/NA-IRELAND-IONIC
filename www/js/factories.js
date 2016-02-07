@@ -43,8 +43,12 @@ angular.module('na_ireland.factories', [])
 
   function dayOfWeekAsString(dayIndex) {
     return ["not a day?", "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
-  };
+  }
 
+  function openMapsLink(destLatitude, destLongitude){
+		window.open('http://maps.google.com/maps?daddr=' + destLatitude + ',' + destLongitude, '_system', 'location=yes');
+		return false;
+	};
   function initMap(){
     var options = {timeout: 10000, enableHighAccuracy: true};
     $cordovaGeolocation.getCurrentPosition(options).then(function(position){
@@ -101,18 +105,23 @@ angular.module('na_ireland.factories', [])
         }
         var time = record.start_time;
         infoWindowContent += "<h4>" + dayOfWeekAsString(record.weekday_tinyint) + "&nbsp" + time.substring(0, 5) + "</h4>";
-        if (record.location_text != "") {
+        if (record.location_text !== "") {
           infoWindowContent += "<p>" + record.location_text +"</p>";
         }
-        if (record.location_street) {
+        if (record.location_street !== "") {
           infoWindowContent += "<p>" + record.location_street +"</p>";
         }
-        if (record.location_info) {
+        if (record.location_info !== "") {
           infoWindowContent += "<p>" + record.location_info +"</p>";
         }
-        if (record.formats) {
+        if (record.formats !== "") {
           infoWindowContent += "<p><dfn> Formats : " + record.formats + "</dfn></p>";
         }
+
+        infoWindowContent += '<a href="#" ng-click="openMapsLink(x.latitude, x.longitude)">';
+        infoWindowContent += '  <button class="button button-small button-positive">Map&nbsp;&nbsp;<i class="icon ion-ios-location"></i>';
+        infoWindowContent += ' </button> </a>';
+        
         addInfoWindow(marker, infoWindowContent, record);
         markerClusterer.addMarker(marker);
         oms.addMarker(marker);

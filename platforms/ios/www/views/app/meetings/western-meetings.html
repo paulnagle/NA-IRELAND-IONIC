@@ -9,6 +9,9 @@
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
         <input type="search" placeholder="Search Address" ng-model="searchText" ng-change="refreshSearch()" ng-model-options="{debounce: 350}">
+        <a on-touch="searchText=''">
+          <i class="icon ion-close-circled "></i>
+        </a>
       </label>
     </ion-header-bar>
     <ion-nav-title>
