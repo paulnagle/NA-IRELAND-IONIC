@@ -48,7 +48,8 @@ angular.module('na_ireland.factories', [])
   function openMapsLink(destLatitude, destLongitude){
 		window.open('http://maps.google.com/maps?daddr=' + destLatitude + ',' + destLongitude, '_system', 'location=yes');
 		return false;
-	};
+	}
+  
   function initMap(){
     var options = {timeout: 10000, enableHighAccuracy: true};
     $cordovaGeolocation.getCurrentPosition(options).then(function(position){
@@ -121,7 +122,7 @@ angular.module('na_ireland.factories', [])
         infoWindowContent += '<a href="#" ng-click="openMapsLink(x.latitude, x.longitude)">';
         infoWindowContent += '  <button class="button button-small button-positive">Map&nbsp;&nbsp;<i class="icon ion-ios-location"></i>';
         infoWindowContent += ' </button> </a>';
-        
+
         addInfoWindow(marker, infoWindowContent, record);
         markerClusterer.addMarker(marker);
         oms.addMarker(marker);
