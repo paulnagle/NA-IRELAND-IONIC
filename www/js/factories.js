@@ -119,10 +119,6 @@ angular.module('na_ireland.factories', [])
           infoWindowContent += "<p><dfn> Formats : " + record.formats + "</dfn></p>";
         }
 
-        infoWindowContent += '<a href="#" ng-click="openMapsLink(' + record.latitude + ',' + record.longitude + ')">';
-        infoWindowContent += '  <button class="button button-small button-positive">Map&nbsp;&nbsp;<i class="icon ion-ios-location"></i>';
-        infoWindowContent += ' </button> </a>';
-
         addInfoWindow(marker, infoWindowContent, record);
         markerClusterer.addMarker(marker);
         oms.addMarker(marker);

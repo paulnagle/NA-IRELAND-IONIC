@@ -52,6 +52,11 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+        "id": "cordova-plugin-whitelist.whitelist",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "clobbers": [
@@ -185,6 +190,11 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+        "id": "cordova-plugin-file.isChrome",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/android/FileSystem.js",
         "id": "cordova-plugin-file.androidFileSystem",
         "merges": [
@@ -217,11 +227,6 @@ module.exports = [
         "clobbers": [
             "window.Media"
         ]
-    },
-    {
-        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
-        "id": "cordova-plugin-whitelist.whitelist",
-        "runs": true
     }
 ];
 module.exports.metadata = 

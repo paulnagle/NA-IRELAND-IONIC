@@ -38,13 +38,16 @@
     "cordova-plugin-device@^1.0.1",
     "cordova-plugin-dialogs@^1.1.1",
     "cordova-plugin-globalization@^1.0.1",
-    "cordova-plugin-inappbrowser",
     "cordova-plugin-geolocation",
-    "cordova-plugin-splashscreen",
     "org.apache.cordova.media",
-    "cordova-plugin-whitelist"
+    "cordova-plugin-whitelist",
+    "cordova-plugin-extension@^1.1.4",
+    "cordova-plugin-geolocation@^1.0.1",
+    "cordova-plugin-inappbrowser@^1.2.0",
+    "cordova-plugin-splashscreen@3.0.0"
   ],
   "cordovaPlatforms": [
-    "android"
+    "android",
+    "ios"
   ]
 }

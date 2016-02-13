@@ -8,42 +8,42 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-extension": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ie.nasouth.apple"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "ie.nasouth.apple"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "ie.nasouth.android.naireland"
+            "PACKAGE_NAME": "ie.nasouth.apple"
         }
     }
 }

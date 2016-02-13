@@ -26,7 +26,6 @@ angular.module('na_ireland', [
 ])
 
 .run(function($ionicPlatform, $rootScope, $ionicConfig, $timeout,$cordovaSplashscreen ) {
-
   $ionicPlatform.on("deviceready", function(){
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -36,21 +35,18 @@ angular.module('na_ireland', [
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-      $cordovaSplashscreen.hide();
+    $cordovaSplashscreen.hide();
   });
 
-
-
-
   // Disable BACK button except to exit the app from the first page
-$ionicPlatform.registerBackButtonAction(function (event) {
-  if($state.current.name=="app.home"){
-    navigator.app.exitApp();
-  }
-  else {
-    // do nothing
-  }
-}, 100);
+  $ionicPlatform.registerBackButtonAction(function (event) {
+    if($state.current.name=="app.welcome"){
+      navigator.app.exitApp();
+    }
+    else {
+      // do nothing
+    }
+  }, 100);
 
 })
 
