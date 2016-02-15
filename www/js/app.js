@@ -17,7 +17,6 @@ angular.module('na_ireland', [
   'na_ireland.config',
   'na_ireland.views',
   'underscore',
-  'ngMap',
   'ngResource',
   'ngCordova',
   'slugifier',

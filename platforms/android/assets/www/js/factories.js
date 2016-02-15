@@ -81,8 +81,34 @@ angular.module('na_ireland.factories', [])
         loadMarkers();
       });
     }, function(error){
+      console.log("Get Current Position error");
+      var latLng = new google.maps.LatLng(53.343294, -6.270121);
+      var mapOptions = {
+        center: latLng,
+        zoom: 9,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        maxZoom: 15
+      };
+
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      // Add a marker clusterer
+      markerClusterer = new MarkerClusterer(map);
+      minClusterZoom = 14;
+      markerClusterer.setMaxZoom(minClusterZoom);
+
+      // Add an overlapping marker spiderifier
+      oms = new OverlappingMarkerSpiderfier(map, {
+        markersWontMove: true,
+        markersWontHide: true,
+        keepSpiderfied: true
+      });
+
+      //Wait until the map is loaded, then load the markers
+      google.maps.event.addListenerOnce(map, 'idle', function(){
         //Load the markers
         loadMarkers();
+      });
     });
   }
 
