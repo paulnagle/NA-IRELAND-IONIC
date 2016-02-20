@@ -32,22 +32,42 @@
     "mv": "^2.1.1"
   },
   "cordovaPlugins": [
-    "com.ionic.keyboard",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-dialogs",
+    "cordova-plugin-globalization",
     "cordova-plugin-extension",
+    "cordova-plugin-inappbrowser",
+    {
+      "locator": "https://github.com/driftyco/ionic-plugins-keyboard.git",
+      "id": "ionic-plugin-keyboard"
+    },
+    "cordova-plugin-geolocation",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-media",
+    "cordova-plugin-file",
     "cordova-plugin-console@^1.0.1",
     "cordova-plugin-device@^1.0.1",
     "cordova-plugin-dialogs@^1.1.1",
     "cordova-plugin-globalization@^1.0.1",
-    "cordova-plugin-geolocation",
-    "org.apache.cordova.media",
-    "cordova-plugin-whitelist",
     "cordova-plugin-extension@^1.1.4",
-    "cordova-plugin-geolocation@^1.0.1",
     "cordova-plugin-inappbrowser@^1.2.0",
+    "cordova-plugin-geolocation@^1.0.1",
     "cordova-plugin-splashscreen@3.0.0"
   ],
   "cordovaPlatforms": [
     "android",
-    "ios"
+    "ios",
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
   ]
 }

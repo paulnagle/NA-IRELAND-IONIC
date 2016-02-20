@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ie.nasouth.apple" version="3.0.15" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ie.nasouth.android.naireland" version="3.0.17" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>NA Ireland</name>
   <description>
         Narcotics Anonymous Ireland
@@ -27,6 +27,7 @@
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
+
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
@@ -77,5 +78,5 @@
   <plugin name="cordova-plugin-inappbrowser" spec="^1.2.0"/>
   <plugin name="com.ionic.keyboard" spec="https://github.com/driftyco/ionic-plugins-keyboard.git"/>
   <plugin name="cordova-plugin-geolocation" spec="^1.0.1"/>
-  <plugin name="cordova-plugin-splashscreen" spec="@3.0.0"/>
+  <plugin name="cordova-plugin-splashscreen" spec="3.0.0"/>
 </widget>
