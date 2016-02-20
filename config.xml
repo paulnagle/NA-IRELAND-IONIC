@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ie.nasouth.android.naireland" version="3.0.17" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ie.nasouth.apple" version="3.0.19" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>NA Ireland</name>
   <description>
         Narcotics Anonymous Ireland
@@ -15,14 +15,8 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="Orientation" value="portrait"/>
 
-  <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="1500"/>
-  <preference name="AutoHideSplashScreen" value="false"/>
-  <preference name="SplashMaintainAspectRatio" value="true"/>
-  <preference name="SplashShowOnlyFirstTime" value="true"/>
-  <preference name="ShowSplashScreenSpinner" value="true"/>
-  <preference name="FadeSplashScreen" value="true"/>
-  <preference name="FadeSplashScreenDuration" value="750"/>
+  <preference name="SplashScreen" value="none"/>
+
 
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
@@ -78,5 +72,5 @@
   <plugin name="cordova-plugin-inappbrowser" spec="^1.2.0"/>
   <plugin name="com.ionic.keyboard" spec="https://github.com/driftyco/ionic-plugins-keyboard.git"/>
   <plugin name="cordova-plugin-geolocation" spec="^1.0.1"/>
-  <plugin name="cordova-plugin-splashscreen" spec="3.0.0"/>
+  <plugin name="cordova-plugin-splashscreen" spec="3.2.0"/>
 </widget>
