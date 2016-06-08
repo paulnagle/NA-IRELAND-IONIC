@@ -1,0 +1,38 @@
+<ion-view view-title="{{conventionName}}">
+  <ion-view hide-back-button="true">
+  <ion-nav-buttons side="left">
+     <button class="button button-assertive" ui-sref="app.speakers">
+          <i class="menu-icon icon ion-ios-arrow-left"></i>
+     </button>
+  </ion-nav-buttons>
+
+  <ion-nav-title>
+    <span>{{conventionName}}</span>
+  </ion-nav-title>
+
+  <ion-content>
+    <div class="list card">
+      <div class="item item-text-wrap">
+        <h2>{{conventionName}}</h2>
+        <h3>{{speakerName}}</h3>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+
+        <a class="tab-item" href="#" ng-click="play('{{fileName}}')">
+          <i class="icon ion-ios-play"></i>
+          Play
+        </a>
+        
+        <a class="tab-item" href="#" ng-click="pause('{{fileName}}')">
+          <i class="icon ion-ios-pause"></i>
+          Pause
+        </a>
+
+        <a class="tab-item" href="#" ng-click="stop()">
+          <i class="icon ion-android-checkbox-blank"></i>
+          Stop
+        </a>
+
+    </div>
+  </ion-content>
+</ion-view>

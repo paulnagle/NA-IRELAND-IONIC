@@ -1,0 +1,5 @@
+{
+    "AudioToolbox.framework": 1,
+    "CFNetwork.framework": 1,
+    "CoreLocation.framework": 1
+}
